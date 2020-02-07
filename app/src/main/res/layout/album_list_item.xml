@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="listener"
+            type="com.example.acto_poc.ui.albums.AlbumAdapter.AlbumAdapterListener" />
+        <variable
+            name="album"
+            type="com.example.acto_poc.data.network.Album" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:onClick="@{() ->  listener.OnItemClick(album)}"
+        android:orientation="vertical">
+        <TextView
+            android:text="@{album.title}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="normal"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            tools:text="sample album name"/>
+    </LinearLayout>
+</layout>

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="listener"
+            type="com.example.acto_poc.ui.user.UserAdapter.UserAdapterListener" />
+        <variable
+            name="user"
+            type="com.example.acto_poc.data.network.User" />
+    </data>
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:onClick="@{() ->  listener.OnItemClick(user)}"
+        android:orientation="vertical">
+        <TextView
+            android:text="@{user.name}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/black"
+            tools:text="Sample Name"/>
+        <TextView
+            android:text="@{user.email}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:textStyle="normal"
+            tools:text="Sample Name"/>
+        <TextView
+            android:text="@{user.phone}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@android:color/black"
+            android:textStyle="normal"
+            tools:text="Sample Name"/>
+    </LinearLayout>
+</layout>
